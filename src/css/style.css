@@ -1,0 +1,32 @@
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+header {
+    height: 51px;
+    background-color: #212121;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    padding: 14px 70px;
+    margin: 0;
+    list-style: none;
+}
+
+.menu .menu_link {
+    font-size: 15px;
+    font-weight: 300;
+    color: #fff;
+    text-decoration: none;
+}
+
+.menu_link:hover {
+    text-decoration: underline;
+}
+
+.menu .menu_item {
+    border-right: 2px dotted black;
+    padding-right: 48px;
+}
