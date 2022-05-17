@@ -2,7 +2,7 @@
     font-family: 'Roboto', sans-serif;
 }
 
-header {
+nav {
     height: 51px;
     background-color: #212121;
 }
@@ -30,3 +30,59 @@ header {
     border-right: 2px dotted black;
     padding-right: 48px;
 }
+
+.subheader {
+    height: 84px;
+    background-color: rgba(0, 0, 0, .6);
+}
+
+.subheader .subheader_logo {
+    display: block;
+    margin-top: 16px;
+    max-width: 100%;
+}
+
+.subheader .subheader_official {
+    margin-top: 6px;
+    opacity: 0.5;
+    font-size: 13px;
+    font-weight: 100;
+    text-align: left;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.subheader .subheader_call {
+    margin-top: 19px;
+    font-size: 12px;
+    font-weight: 300;
+    text-align: right;
+    color: #fff;
+}
+
+.subheader .subheader_phone {
+    margin-top: 8px;
+    display: block;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 12px;
+    text-align: right;
+    color: #fff;
+    text-decoration: none;
+    text-align: right;
+}
+
+.subheader .subheader_btn {
+    margin-top: 19px;
+    width: 172px;
+    height: 46px;
+    box-shadow: inset 0px -3px 0 0 rgba(0, 0, 0, 0.12);
+    border: none;
+    background-image: linear-gradient(to top, #1eacc7, #4ce2ff);
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 400;
+    text-align: center;
+    color: #fff;
+    text-transform: uppercase;
+}
+
