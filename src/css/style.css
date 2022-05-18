@@ -172,10 +172,10 @@ nav {
     align-items: flex-start;
 }
 .reason .reason_item .reason_round {
-    margin-top: 10px;
     width: 113px;
     height: 113px;
     margin-right: 26px;
+    margin-top: 10px;
     background-color: #1eacc7;
     border-radius: 50%;
     display: flex;
