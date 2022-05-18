@@ -11,6 +11,30 @@ header {
     position: relative;
 }
 
+.label {
+    margin: 0 auto;
+    width: 112px;
+    height: 24px;
+    background-color: #000;
+    font-size: 11px;
+    line-height: 24px;
+    font-weight: 100;
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.title {
+    font-size: 38px;
+    font-weight: 700;
+    margin-bottom: 0;
+    margin-top: 38px;
+    line-height: 32px;
+    text-align: center;
+    color: #222;
+    text-transform: uppercase;
+}
+
 .menu {
     display: flex;
     justify-content: space-between;
@@ -115,7 +139,6 @@ header {
     color: #fff;
     text-align: center;
 }
-
 .promo .promo_btn {
     display: block;
     margin: 118px auto 0 auto;
@@ -129,3 +152,44 @@ header {
     font-weight: 400;
     color: #fff;
 }
+
+.reason {
+    padding: 71px 0 65px 0;
+}
+.reason .row {
+    margin: 0 auto;
+    margin-top: 40px;
+}
+.reason .reason_item {
+    margin-top: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.reason .reason_item .reason_round {
+    width: 113px;
+    height: 113px;
+    margin-right: 26px;
+    background-color: #1eacc7;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.reason .reason_text {
+    width: 341px;
+}
+.reason .reason_item .reason_text .reason_title {
+    font-size: 17px;
+    font-weight: 400;
+    color: #1eacc7;
+}
+.reason .reason_item .reason_text .reason_descr {
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 1.4;
+    text-align: justify;
+    color: #202020;
+}
+
+
