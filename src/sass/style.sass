@@ -1,5 +1,10 @@
-$main_color: #1eacc7
-$additional_color: #ff5656
+$main-color: #1eacc7
+$additional-color: #ff5656
+
+=btn_hover 
+   &:hover
+        background-image: none
+        background-color: $main-color
 
 *
     font-family: 'Roboto', sans-serif
@@ -7,13 +12,12 @@ $additional_color: #ff5656
 header
     position: relative
     height: 50px
-
-nav
-    position: fixed
-    width: 100%
-    height: 51px
-    background-color: #212121
-    z-index: 2
+    nav
+        position: fixed
+        width: 100%
+        height: 51px
+        background-color: #212121
+        z-index: 2
 
 .label
     margin: 0 auto
@@ -51,18 +55,15 @@ nav
     padding: 14px 70px
     margin: 0
     list-style: none
-
-    .menu_item
+    &_item
         border-right: 2px dotted black
         padding-right: 48px
-
-        .menu_link
+        &_link
             font-size: 15px
             font-weight: 300
             color: #fff
             text-decoration: none
-
-            .menu_link:hover
+            &:hover
                 text-decoration: underline
 
 .subheader
@@ -71,28 +72,24 @@ nav
     width: 100%
     height: 84px
     background-color: rgba(0, 0, 0, 0.6)
-
-    .subheader_logo
+    &_logo
         display: block
         margin-top: 16px
         max-width: 100%
-
-    .subheader_official
+    &_official
         margin-top: 6px
         opacity: 0.5
         font-size: 13px
         font-weight: 100
         text-align: left
         color: rgba(255, 255, 255, 0.5)
-
-    .subheader_call
+    &_call
         margin-top: 19px
         font-size: 12px
         font-weight: 300
         text-align: right
         color: #fff
-
-    .subheader_phone
+    &_phone
         margin-top: 8px
         display: block
         font-size: 22px
@@ -102,35 +99,33 @@ nav
         color: #fff
         text-decoration: none
         text-align: right
-
-    .subheader_btn
+    &_btn
         margin-top: 19px
         width: 172px
         height: 46px
         box-shadow: inset 0px -3px 0 0 rgba(0, 0, 0, 0.12)
         border: none
-        background-image: linear-gradient(to top, $main_color, #4ce2ff)
+        background-image: linear-gradient(to top, $main-color, #4ce2ff)
         border-radius: 4px
         font-size: 14px
         font-weight: 400
         text-align: center
         color: #fff
         text-transform: uppercase
+        +btn_hover
 
 .promo
     padding: 150px 0 135px 0
     min-height: 800px
     background: url('../img/bg/main_bg.jpg') center (center / cover) no-repeat
-
-    .promo_header
+    &_header
         display: block
         font-size: 60px
         font-weight: 900
         line-height: 60px
         text-align: center
         color: #fff
-
-    .promo_subheader
+    &_subheader
         display: block
         margin: 0
         margin-top: 22px
@@ -139,16 +134,14 @@ nav
         line-height: 36px
         color: #fff
         text-align: center
-
-    .promo_descr
+    &_descr
         margin-top: 23px
         line-height: 1.33
         font-size: 18px
         font-weight: 400
         color: #fff
         text-align: center
-
-    .promo_btn
+    &_btn
         display: block
         margin: 118px auto 0 auto
         width: 259px
@@ -156,44 +149,39 @@ nav
         box-shadow: inset 0px -4px 0 0 rgba(0, 0, 0, 0.12)
         border: none
         border-radius: 4px
-        background-image: linear-gradient(to top, $main_color, #4ce2ff)
+        background-image: linear-gradient(to top, $main-color, #4ce2ff)
         font-size: 18px
         font-weight: 400
         color: #fff
+        +btn_hover
 
 .reason
     padding: 71px 0 65px 0
-
     .row
         margin: 0 auto
         margin-top: 40px
-
-    .reason_item
+    &_item
         margin-top: 35px
         display: flex
         justify-content: center
         align-items: flex-start
-
-        .reason_round
+        &_round
             width: 113px
             height: 113px
             margin-right: 26px
             margin-top: 10px
-            background-color: $main_color
+            background-color: $main-color
             border-radius: 50%
             display: flex
             justify-content: center
             align-items: center
-
-        .reason_text
+        &_text
             width: 341px
-
-            .reason_title
+            &_title
                 font-size: 17px
                 font-weight: 400
                 color: $main_color
-
-            .reason_descr
+            &_descr
                 font-size: 15px
                 font-weight: 300
                 line-height: 1.4
@@ -244,6 +232,27 @@ nav
             background-color: #000
             border-radius: 50%
             cursor: pointer
+            &:before
+                content: ''
+                display: block
+                width: 14px
+                height: 2px
+                background-color: $main-color
+                transition: 0.3s all
+            &:after
+                content: ''
+                position: absolute
+                left: 50%
+                transform: translateX(-50%)
+                display: block
+                width: 2px
+                height: 14px
+                background-color: $main-color
+                transition: 0.3s all
+
+            &:hover
+                &:before, &:after
+                    background-color: $additional-color      
 
 .choice
     min-height: 896px
@@ -257,10 +266,52 @@ nav
         color: #222
     &_label
         background-color: #fff
-        color: #070716;
+        color: #070716
     &_title
-        color: #fff;
+        color: #fff
     &_subtitle
-       color: #fff; 
+       color: #fff
 
-        
+.require
+    padding: 68px 0 84px 0
+    &_block
+        margin: 33px 0
+        &_nmb
+            margin-bottom: 0
+    &_title
+        font-size: 22px
+        font-weight: 400
+        color: #1ca8c3
+    &_list
+        list-style-type: none
+        padding-left: 50px
+        margin-top: 22px
+        li
+            font-size: 17px
+            position: relative
+            margin-bottom: 10px
+            font-weight: 300
+            line-height: 1.41
+            &:before
+                content: ''
+                display: block
+                position: absolute
+                left: -32px
+                top: 3px
+                width: 21px
+                height: 20px
+                background: url('../icons/condition_blue.png') center (center / cover) no-repeat
+    &_descr
+        font-size: 17px
+        font-weight: 300
+        color: #1ca8c3
+        text-align: left
+    .red
+        .require_title
+            color: $additional-color
+        .require_list
+            li
+                &:before
+                    background: url('../icons/condition_red.png') center (center / cover) no-repeat
+                    
+                
